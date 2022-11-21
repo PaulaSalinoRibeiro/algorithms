@@ -16,3 +16,8 @@ def encrypt_message(message: str, key: int):
         part_two, part_one = part_one, part_two
 
     return "".join(part_one) + "_" + "".join(part_two)
+
+
+if __name__ == "__main__":
+
+    print(encrypt_message("AABBCC", "1"))
