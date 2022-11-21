@@ -1,6 +1,6 @@
 def study_schedule(permanence_period, target_time):
 
-    if target_time == 0 or target_time is None:
+    if not isinstance(target_time, int):
         return None
 
     student_online = 0
@@ -10,6 +10,6 @@ def study_schedule(permanence_period, target_time):
         ):
             return None
         if student_time[0] <= target_time and student_time[1] >= target_time:
-            student_online = student_online + 1
+            student_online += 1
 
     return student_online
